@@ -11,7 +11,7 @@ pipeline{
         script{
           echo "Installing Project Libraries and Requirements"
           sh "python -m pip install --upgrade pip"
-          sh "pip install prometheus-client flake8 pytest fastapi uvicorn pytest requests prometheus-client httpx"
+          sh "pip install prometheus-client flake8 pytest fastapi uvicorn pytest requests prometheus-client httpx pytest"
           sh "if [ -f requirements.txt ]; then pip install -r requirements.txt; fi"
       }
     }
@@ -29,7 +29,6 @@ pipeline{
      steps{
        script{
          echo "Testing The Code"
-         sh "pip install pytest"
          sh "pytest ./test/unit.py"
        }
      } 
