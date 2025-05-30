@@ -1,0 +1,7 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: devops-hive
+spec:
+  ports:
+    - port: 8080
