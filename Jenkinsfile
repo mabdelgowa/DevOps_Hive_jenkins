@@ -29,6 +29,7 @@ pipeline{
      steps{
        script{
          echo "Testing The Code"
+         sh "pip install pytest"
          sh "pytest ./test/unit.py"
        }
      } 
